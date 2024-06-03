@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!--This site shows the full detail for an individual blog-->
+
+<body class="blog_detail">
+<h1>{{ post.title }}</h1>
+<p>{{ post.created_at }}</p>
+<div>{{ post.content }}</div>
+<br>
+<a href="{% url 'blog:blog_list' %}"><button>Back to Blog List</button>
+
+</a>
+{% endblock %}
+
+

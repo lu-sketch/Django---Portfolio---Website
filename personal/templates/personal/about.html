@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Meta imports and page title-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}About Me{% endblock %}
+    <title>About Me</title>
+</head>
+<!--Styling tags for the external css filee-->
+<body class="about">
+  <section id="about">
+    {% block content %}
+    <body class="about">
+    <!--Page contents-->
+        <h2>My journey</h2>
+        <br>
+        <p>
+            My journey started on a livestock and game farm. Outside every day
+            with the animals, it was heaven! Spent as much of my time as possible
+            outside.
+        </p>
+        <p>
+            My journey continued, after school, studying as an Agricultural Economist.
+            I embarked on my Agricultural Economic journey with the Department of
+            Agriculture in Bloemfontein. There I did market research.
+            We held farmer days to help upcoming farmers with step-by-step
+            instructions on how to identify their target markets and
+            how to deliver their products to their customers.
+            I learned how to do project feasibility studies, project management for upcoming
+            farmer's projects. We held market research workshops to educate and
+            advise farmers about the marketing chain and how to deliver their products
+            to their markets/customers fast and efficiently.
+        </p>
+        <p>After life happened, it took me on a different path, one that led to
+            Data Science and Hyperiondev. I learned my first programming language --
+            Python. Then I moved on to Machine learning and Deep Learning.
+            The biggest surprise for me was....I love this!!
+        </p>
+
+        <h3>Technical Skills</h3>
+        <div class="skills-list">
+            <h4>Programming Languages</h4>
+            <ul>
+                <li>Python</li>
+                <li>HTML</li>
+                <li>CSS</li>
+            </ul>
+            <h4>Data Science and Analytics Software</h4>
+            <ul>
+                <li>Pandas & Numpy</li>
+                <li>Jupyter Notebook</li>
+                <li>Keras</li>
+                <li>Tensorflow</li>
+                <li>SQL</li>
+                <li>SQLite</li>
+                <li>PowerBI</li>
+            </ul>
+        </div>
+    </section>
+    <br>
+    <br>
+    <!--Rerouting using a 'back to home' button to navigate back to the site's
+    home page-->
+    <a href="{% url 'personal:home' %}" ><button>Back to Home</button></a>
+    {% endblock %}
+
+

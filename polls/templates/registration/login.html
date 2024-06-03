@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+<!--This page is the login page for the polls app of the site-->
+{% block content %}
+<h2>Login</h2>
+<br>
+<p>Are you a fan of Python, HTML, CSS or Javascript?
+    <br>
+    Pineapple on pizza? Yay! or Nay!
+    <br>
+    These and more fun polls you can vote on, proceed to login.
+
+</p>
+<p><i><small>Default username: peter</i></small><br>
+    <i><small> Default password: spiderman123</i></small>  <br>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+</form>
+<br>
+<p>Don't have an account?</p>
+<br>
+<a href="{% url 'polls:register' %}"><button>Register here</button></a>
+<br>
+<br>
+<a href="{% url 'personal:home' %}" ><button>Back to Home</button></a>
+{% endblock %}
+
+

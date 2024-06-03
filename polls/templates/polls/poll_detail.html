@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!--After a poll is chosen, this page displays the detail of the poll chosen-->
+
+<h2>{{ poll.question }}</h2>
+<form method="post">
+    {% csrf_token %}
+    {% for choice in poll.choice_set.all %}
+        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+        <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+    {% endfor %}
+    <button type="submit">Vote</button>
+</form>
+<br>
+<a href="{% url 'polls:poll_list' %}" ><button>Back to Polls</button></a>
+<br>
+<br>
+<br>
+<a href="{% url 'personal:home' %}" ><button>Back to Home</button></a>
+{% endblock %}
+
+
+

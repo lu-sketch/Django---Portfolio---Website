@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+<!--The following page is the register page for the Polls app-->
+<!---The user must register or login if existing user to vote on the polls-->
+{% block content %}
+<h2>Register</h2>
+
+<p>
+    Hi, there are some very interesting polls to vote on.
+ <br>
+    Register with your own username and password, and join in the fun!
+</p>
+<p>To check out the polls, without registering......
+    Go to the <strong>LOGIN PAGE</strong> and login using;</p>
+    <p><i><small>Default username: peter</i></small><br>
+       <i><small> Default password: spiderman123</i></small>  <br>
+   </p>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Register</button>
+</form>
+<br>
+<p><strong>Already a user? No problem, proceed to the login page......</strong></p>
+<a href="{% url 'polls:login' %}" ><button>Login</button></a>
+<br>
+<br>
+<a href="{% url 'personal:home' %}" ><button>Back to Home</button></a>
+{% endblock %}

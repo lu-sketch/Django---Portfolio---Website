@@ -1,0 +1,103 @@
+{%extends "base.html"%}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<!--Body of the pagee-->
+
+</head>
+<body class="education">
+  {% block content %}
+  <body class="education">
+
+    <h1>Educational Background </h1>
+    <br>
+    <h3>Data Science Bootcamp - 2022 </h3>
+    <p> My latest education experience was in 2022.  I decided to do a career 
+      from economics and finance into Data Science.  My existing experience in
+      Economics and finance, I see as a great foundation for Data Science and 
+      later moving into Bussiness analytics.
+    </p>
+    <br>
+    <h3>Software enginnering Bootcamp - 2024</h3>
+    <p>
+      Currently I am enrolled in the Software Engineering Bootcamp at Hyperiondev.
+      I am working on tasks and projects where I learn to develop websites.
+      I am very exited about this! It brings out my creative side.  I love 
+      developing websites where you can see it take shape before your eyes
+      and that you can literally change anything into the vision that you have
+      for the website.
+      <br>
+      <p>
+        In my first project I used HTML and CSS to devolep a portfolio website.
+        Then I moved on to work with the following frameworks;
+        <br> Bootstrap and Django.
+        <br>
+        Now you have the pleasure of viewing my newest <strong>Django</strong>
+        project,<strong> this site!</strong>
+      </p>
+      <br>
+      <h2> Programming languages used in Software Development </h2>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS</li>
+        <li>Bootstrap</li>
+        <li>Django</li>
+      </ul>
+      <br>
+      <h2> Containers and Version Control</h2>
+      <ul>
+        <li>Git and GitHub</li>
+        <li>Docker</li>
+      </ul>
+
+    </p>
+    <h3>Hyperiondev Portfolio</h3>
+    <p>
+      I am proud to say that I finished <strong>2nd</strong> in my Data Science Bootcamp with
+      an average of <strong>98%.</strong>  I am really proud of this achievement.
+      <br>
+      I learned Python and other data science tools from scratch and am
+      very proud of completing this Bootcamp.
+      This Bootcamp opened-up the world of Data Science for me! 
+      <br>
+      The following are a few of the skills I gained through this Bootcamp;
+      <ul>
+        <li>Python</li>
+        <li>SQL and SQLiten</li>
+        <li>Supervised and Unspervised Machine Learning</li>
+        <li>Keras
+        <li>Tensorflow</li> 
+      </ul>
+      
+      <p>
+      Let's proceed to <strong>2024!</strong> <br>
+      My learning journey continued with Hyperion while also working as a Data
+      Science mentor.
+      <br>
+      <strong>Software Engineering Bootcamp!</strong><br>
+      I enjoyed every second of this Bootcamp experience!
+      Learning HTML and CSS with Bootstrap, designing websites, wow!
+      I love the freedom and creativity of it, found out I have a very creative 
+      side! <br>
+      The following is my Hyperiondev portfolio for all the projects completed
+      during my Software Engineering Bootcamp. 
+      <br>
+    <br>
+      <a href="//www.hyperiondev.com/portfolio/86892/" target="_blank">
+        <button>Hyperiondev Profile</button></a>
+        <br>
+    <br>
+    <br>
+    <a href="{% url 'personal:home' %}" ><button>Back to Home</button></a>
+
+    {% endblock %}
+    </p>
+

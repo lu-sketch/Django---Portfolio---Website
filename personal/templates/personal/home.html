@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Meta imports-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0 ">
+    <meta name="keywords" content="Lucille,Jordaan,Portfolio Website,HTML, CSS">
+    <meta name="description" content="Lucille Jordaan, profile, about me">
+     <!-- Link to external CSS file -->
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    {% block title %}Lucille Portfolio{% endblock %}
+    <title>Lucille Jordaan Portfolio</title>
+</head>
+
+<body class="home">
+    {% block content %}
+    <header>
+        <h1>Portfolio Website</h1>
+        <!---Navigation Bar, linking the rest of the pages on the site-->
+        <nav>
+            <ul>
+                <li><a href="{% url 'projects:project_list' %}">PROJECTS</a></li>
+                <li><a href="{% url 'personal:about' %}">ABOUT ME</a></li>
+                <li><a href="{% url 'personal:education' %}">EDUCATION</a></li>
+                <li><a href="{% url 'personal:contact' %}">CONTACT ME</a></li>
+                <li><a href="{% url 'blog:blog_list' %}">BLOG</a></li>
+                <li><a href="{% url 'polls:register' %}">POLLS</a></li>
+
+            </ul>
+        </nav>
+
+        <!---The profile picture is contained in the images file from the 
+        'personal' app-->
+        <img src="{% static 'personal/images/profile_pic.jpg' %}" alt="Profile Picture">
+        <h1>Lucille Jordaan - Insights-driven Data Scientist</h1>
+    </header>
+
+    <section>
+        <h2>Professional Summary</h2>
+        <br>
+        <p>I am a qualified Agricultural Economist. I have a BSc.Agric.Hon 
+            degree in Economics and Agricultural Economics. I grew up on a farm
+            and love everything about the outdoors and farm life. 
+            Now....how did this farm girl turned into a Data Scientist, I wonder...
+        </p>
+        <p>
+            Life happened. I did a Career change in 2022 and never looked
+            back! I learned a new Programming language, completed my Data Science
+            Bootcamp with Hyperiondev and I am very proud of this achievement! 
+            I used my financial and economic background to further enhance my 
+            analytical and data science skills.
+        </p>
+        <p>
+            Yes, a farm girl that became a data scientist... I know!
+        </p>
+    </section>
+
+    <section>
+        <h2>Introduction</h2>
+        <p>
+            I am a newly converted programmer/coder. Yes, I have made the leap 
+            into the Tech Industry.
+            Honestly speaking, I am loving it! I started this journey with 
+            the Data Science Bootcamp @Hyperiondev. This was my introduction 
+            to Python and coding. The biggest surprise for me was that 
+            I never thought that I would enjoy learning to code this much!
+        </p>
+    </section>
+
+    <section>
+        <p>
+            I was privileged to attend workshops held by experts from Canada in the respective
+            fields of animal husbandry and marketing of agricultural products.
+            I then thought to spread my wings and went to the U.S.A! Here I worked
+            on an organic farm. This was a wonderful experience, one that I enjoyed
+            immensely! Here I worked with people from all over the world like 
+            Brazil, Mexico and Europe.
+        </p>
+
+        <p>
+            Then I did a PGCE, through UNISA as a back-up. I taught maths and maths
+            literacy for Grade 8 and maths literacy for Grade 10-12. Here I saw what
+            an impact teaching can have.
+            That is why, currently at Hyperiondev I love teaching students about 
+            the wonderful world of coding while upskilling myself to become 
+            the best Data Scientist that I can be!
+        </p>
+
+        <p>
+            Please join me on this exciting journey!
+        </p>
+
+        <p>
+            Ciao!<br>
+            Lucille
+        </p>
+    </section>
+    {% endblock %}
+    <!-- Adding a footer to each page with copyright information-->
+    <footer>
+        <div class="copyright">
+            <span>&copy;</span> Lucille Jordaan
+        </div>
+    </footer>
+</body>
+
+</html>
+

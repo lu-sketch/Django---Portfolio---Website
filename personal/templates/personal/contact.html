@@ -1,0 +1,70 @@
+{%extends "base.html"%}
+{% load static %}
+
+<!--The following page displays contact details-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}Contact Me{% endblock %}
+
+    <title>Contact Me</title>
+    
+  </head>
+ 
+    {% block content %}
+    <body class="contact">
+    <h1>Contact Info</h1>
+    <br>
+    <h3>LinkedIn</h3>
+    <p>
+    Here you can find out more about my profesional journey. Including
+    the newest work experience, skills acquired and current experience.
+    <br>
+    <br>
+    <a href=" https://www.linkedin.com/in/lucille-jordaan-25ba7977"
+      target="_blank"><button>LinkedIn</button>
+        </a>
+        <section>
+          <br>
+          <h3>GitHub</h3>
+          <p>
+          You are welcome to hop over to my GitHub page.
+          Past projects include some Capstone Projects from my Data Science
+          Bootcamp. The recent project being an EDA (Exploratory Data Analysis)
+          on the Titanic data, done in Jupyter Notebook.
+          
+          Currently I am upskilling, doing in-depth projects on various Machine
+          Learning models.  Check it out!
+          <br>
+          <br>
+          <a href="https://github.com/lu-sketch" target="_blank"><button>GitHub</button>
+          </a>
+          </p>
+      <br>
+      </section>
+    </p>
+    <!--A contact form is added.
+    The user can fill in their details and submit
+  After submission, the user will be redirected back to the home page-->
+
+    <title>Contact Form</title>
+    <h2>Contact Me</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+  <body>
+  
+<br>
+<br>
+<a href="{% url 'personal:home' %}" ><button>Back to Home</button></a>
+
+{% endblock %}
+
+  </body>
+</html>

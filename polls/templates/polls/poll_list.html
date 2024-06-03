@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!--This page displays all the available polls that the user can vote on-->
+
+<h2>Available Polls</h2>
+<ul>
+    {% for poll in polls %}
+        <li>
+            <br>
+            <a href="{% url 'polls:poll_detail' poll.id %}">{{ poll.question }}</a>
+        </li>
+        <br>
+    {% endfor %}
+</ul>
+<br>
+<a href="{% url 'personal:home' %}" ><button>Back to Home</button></a>
+{% endblock %}

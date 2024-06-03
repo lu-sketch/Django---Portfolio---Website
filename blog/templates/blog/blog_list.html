@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!--This page displays all the blogs in a list form to the user-->
+
+<body class="blog_list">
+<h1>My Blog Posts</h1>
+<ul>
+    <br>
+    {% for post in posts %}
+        <li>
+            <a href="{% url 'blog:blog_detail' post.id %}">{{ post.title }}</a>
+            <p>{{ post.created_at }}</p>
+        </li>
+    {% endfor %}
+</ul>
+
+<br>
+<br>
+<a href="{% url 'personal:home' %}" ><button>Back to Home</button></a>
+{% endblock %}
+
+
