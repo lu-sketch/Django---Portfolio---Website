@@ -24,19 +24,18 @@ These apps includes various features such as;
 ### Setting Up the Project
 
 #### Using a Python Virtual Environment
-1. **Create a virtual environment**:
+1. **Create a virtual environment**:  
    python -m venv env
 
-2. **Activate a virtual environment**:
-** On MacOS and Linux;
-source env/bin/activate
-
-** On Windows;
+2. **Activate a virtual environment**:  
+On MacOS and Linux:  
+source env/bin/activate  
+On Windows:  
 env\Scripts\activate
 
-3. **Install project dependencies**:
-pip install -r requirements.txt
 
+3. **Install project dependencies**:  
+pip install -r requirements.txt
 
 
 ### Running the Project with Docker
