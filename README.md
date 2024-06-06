@@ -39,6 +39,13 @@ pip install -r requirements.txt
 
 
 ### Running the Project with Docker
+1. **Pull the Docker image from Docker Hub:**  
+docker pull wiidlucille247/django_portfolio
+
+2. **Run the Docker container:**  
+docker run -p 8000:8000 wiidlucille247/django_portfolio  
+
+
 
 ####  Running the Project using Docker Playground
 1. **Visit Docker Playground:**
