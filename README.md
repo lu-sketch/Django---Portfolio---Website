@@ -7,10 +7,10 @@ This project showcases a portfolio of website created using the popular
 Django framework.
 The website consits of several different applications.
 These apps includes various features such as;
--A project app - Showcasing latest projects with links to GitHub repositories.
--A blog app - documenting my coding journey.
--A personal app - providing background, educational and contact information.
--A polls app - where users can vote on exciting polls. project showcases.
+- A project app - Showcasing latest projects with links to GitHub repositories.
+- A blog app - documenting my coding journey.
+- A personal app - providing background, educational and contact information.
+- A polls app - where users can vote on exciting polls. project showcases.
 
 ## Features
 
