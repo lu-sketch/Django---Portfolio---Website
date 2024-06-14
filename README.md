@@ -40,10 +40,10 @@ pip install -r requirements.txt
 
 ### Running the Project with Docker
 1. **Pull the Docker image from Docker Hub:**  
-docker pull wiidlucille247/django_portfolio
+docker pull wiidlucille247/django-project1:latest
 
 2. **Run the Docker container:**  
-docker run -p 8000:8000 wiidlucille247/django_portfolio  
+docker run -p 8000:8000 wiidlucille247/django-project1:latest
 
 
 
@@ -59,11 +59,11 @@ Click on the "Add New Instance" button.
 
 4. **Pull the Docker image:**
 Run the following command in the Docker Playground terminal:
-docker pull wiidlucille247/django_portfolio
+docker pull wiidlucille247/django-project1
 
 5. **Run Docker Container:**
 Start the following command in the Docker Playground terminal
-docker run -p 8000:8000 wiidlucille247/django_portfolio
+docker run -p 8000:8000 wiidlucille247/django-project1
 
 6. **Run Docker Container:**
 Access the application.
